@@ -1,0 +1,155 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.first-header {
+  color: hsl(212, 6%, 44%);
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  margin: 0;
+}
+
+.powered {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.header-text {
+  font-weight: 200;
+  margin-bottom: 22px;
+  color: hsl(0, 0%, 40%);
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+section:before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.p {
+  font-size: 0.9rem;
+  color: hsl(212, 6%, 44%);
+  margin-bottom: 10px;
+}
+
+.Supervisor-section::before {
+  background: hsl(180, 62%, 55%);
+}
+
+.team-builder-section::before {
+  background: hsl(0, 78%, 62%);
+}
+
+.karma-section::before {
+  background: hsl(34, 97%, 64%);
+}
+
+.calculator-section::before {
+  background: hsl(212, 86%, 64%);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: hsl(0, 0%, 20%);
+  margin-bottom: 8px;
+}
+
+.section-text {
+  font-size: 0.7rem;
+  color: hsl(212, 6%, 44%);
+  margin-bottom: 10px;
+}
+
+img {
+  float: right;
+  width: 40px;
+  height: 40px;
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 600px;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+  }
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .Supervisor-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .team-builder-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+    margin-bottom: 350px;
+    row-gap: 20px;
+  }
+
+  .calculator-section {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: 0 auto;
+  }
+
+  .karma-section {
+    margin-top: 300px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+}
